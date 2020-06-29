@@ -1,0 +1,521 @@
+/* small mobile styles */
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Cursor */
+
+.cursor {
+    position: absolute;
+    background: rgba(0, 0, 0, .3);
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    z-index: 1;
+    transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+        0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    transform: scale(0.8);
+}
+
+.cursor::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    /* background-image: url("http://mirkozeppieri.emanuelepapale.com/wp-content/uploads/2018/07/project-hover-cursor.jpg"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+    opacity: 0;
+}
+
+.cursor.active {
+    opacity: 1;
+    transform: scale(12);
+}
+
+.cursor.active::before {
+    opacity: 1;
+}
+
+.cursor-follower {
+    position: absolute;
+    background: rgba(255, 221, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    border: 1.2px solid var(--amarillo-mobic);
+    border-radius: 100%;
+    z-index: 1;
+    transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+        0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    transform: translate(4px, 4px);
+}
+
+.cursor-follower.active {
+    opacity: 0.3;
+    transform: scale(0);
+}
+
+
+    /* header */
+
+.header {
+    width: 100%;
+    height: 10.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #ffdd00;
+    background-color: #404040;
+}
+
+.logo-mobic {
+    width: 10.5rem;
+    height: 10.5rem;
+    background-color: var(--amarillo-mobic);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-mobic img {
+    width: 16rem;
+}
+
+.social-media {
+    display: flex;
+    margin-right: 3rem;
+}
+
+.social-media i {
+    font-size: 3rem;
+    color: var(--amarillo-mobic);
+}
+
+.social-media .fa-instagram {
+    margin-left: 2rem;
+}
+
+.fa-facebook-f {
+    transition: font-size .2s ease;
+}
+
+.fa-facebook-f:hover {
+    font-size: 7rem;
+}
+
+.fa-instagram {
+    transition: font-size .2s ease;
+}
+
+.fa-instagram:hover {
+    font-size: 7rem;
+}
+
+.siguenos {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--amarillo-mobic);
+    position: relative;
+    margin-right: 2rem;
+}
+
+    /* main */
+
+main {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(129,129,129,1) 0%, rgba(74,72,72,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-cta {
+    width: 100%;
+    /* height: 40vh; */
+    margin-top: -22rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.texto-hero {
+    font-size: 8vw;
+    line-height: 1.3;
+    color: var(--amarillo-mobic);
+    margin: 0 2rem 2rem 2rem;
+}
+
+.btn-cta {
+    width: 65vw;
+    background-color: var(--amarillo-mobic);
+    color: #404040;
+    padding: 1.5rem 4rem;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    text-align: center;
+    transition: all .5s ease;
+}
+
+.btn-cta:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid var(--amarillo-mobic);
+    color: var(--amarillo-mobic);
+    font-size: 1.7rem;
+    z-index: 2;
+}
+
+.btn-whatsapp {
+    width: 65vw;
+    border: 2px solid var(--amarillo-mobic);
+    color: var(--amarillo-mobic);
+    padding: 1rem 4rem;
+    font-size: 1.4rem;
+    border-radius: 50px;
+    line-height: 1;
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: var(--amarillo-mobic);
+    border: 2px solid var(--amarillo-mobic);
+    color: #404040;
+    font-size: 1.7rem;
+}
+
+.btn-whatsapp i {
+    font-size: 3rem;
+    margin-right: .6rem;
+}
+
+.btn-whatsapp a {
+    color: var(--amarillo-mobic);
+    
+}
+
+.contacto-phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--amarillo-mobic);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.contacto-phone h3 {
+    font-weight: 500;
+    margin-left: .8rem;
+}
+.contacto-phone i {
+    font-size: 2rem;
+}
+
+.contacto-mail {
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    color: var(--amarillo-mobic);
+    font-size: 1.5rem;
+}
+
+.contacto-mail i {
+    font-size: 2rem;
+}
+
+.contacto-mail a {
+    color: var(--amarillo-mobic);
+    margin-left: .8rem;
+}
+
+.accesorios {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+.accesorios-dos {
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--amarillo-mobic);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.mobic img {
+    width: 70vw;
+    
+}
+
+
+/* large mobile styles */
+
+@media screen and (min-width: 414px) {
+
+    .siguenos {
+        font-size: 2rem;
+    }
+
+    .btn-cta {
+        width: 55vw;
+        font-size: 1.8rem;
+    }
+
+    .btn-whatsapp {
+        width: 55vw;
+        font-size: 1.7rem;
+    }
+
+    .contacto-phone {
+        font-size: 2rem;
+    }
+    
+    .contacto-mail {
+        font-size: 2rem;
+    }
+
+    .social-media i {
+        font-size: 4rem;
+    }
+
+    .accesorios {
+        bottom: -1px;
+    }
+
+}
+
+/* small tablet styles */
+
+@media screen and (min-width: 768px) {
+    
+    .text-cta {
+        margin-top: -40rem;
+    }
+
+    .siguenos {
+        font-size: 3rem;
+    }
+
+    .social-media i {
+        font-size: 5rem;
+        margin: 0 2rem;
+    }
+
+    .btn-cta {
+        width: 50vw;
+        font-size: 2.5rem;
+    }
+
+    .btn-whatsapp {
+        width: 50vw;
+        font-size: 2.5rem;
+    }
+
+    .btn-whatsapp i {
+        font-size: 5rem;
+    }
+
+    .contacto-phone {
+        font-size: 2.5rem;
+    }
+
+    .contacto-phone i {
+        font-size: 3rem;
+    }
+    
+    .contacto-mail {
+        font-size: 2.5rem;
+    }
+
+    .contacto-mail i {
+        font-size: 3rem;
+    }
+}
+
+/* large tablet & laptops styles */
+
+@media screen and (min-width: 1024px) {
+
+    .mobic img {
+        width: 50vw;
+    }
+
+    .container {
+        display: flex;
+    }
+    
+    .accesorios {
+        display: none;
+    }
+
+    .accesorios-dos {
+        display: initial;
+    }
+
+    .header {
+        width: 14.6rem;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-right: 3px solid #ffdd00;
+        border-bottom: none;
+    }
+
+    .logo-mobic {
+        width: 14.6rem;
+        height: 14.6rem;
+    }
+
+    .social-media {
+        flex-direction: column;
+        margin-right: 0;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8rem;
+    }
+
+    .siguenos {
+        font-size: 2.5rem;
+        order: 2;
+        transform: rotate(-90deg);
+        margin-top: 20rem;
+    }
+
+    .siguenos::after {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 2px;
+        background: var(--amarillo-mobic);
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+
+    .fa-facebook-f {
+        padding: 2rem 2rem 2rem 2rem;
+    }
+
+    main {
+        flex-direction: row;
+    }
+
+    .text-cta {
+        justify-content: flex-start;
+        flex: 1 1 50%;
+        margin: 6rem 4rem 0 5rem;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .accesorios {
+        flex: 1 1 50%;
+    }
+
+    .texto-hero {
+        font-size: 4vw;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
+    .btn-cta {
+        width: 20vw;
+        font-size: 1.5rem;
+    }
+
+    .btn-whatsapp {
+        width: 20vw;
+        font-size: 1.35rem;
+    }
+
+    .btn-whatsapp i {
+        font-size: 4rem;
+    }
+
+    .contacto-phone {
+        font-size: 2rem;
+    }
+
+    .accesorios-dos img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: right;
+    }
+
+}
+
+/* small desktop styles */
+
+@media screen and (min-width: 1366px) {
+
+    .btn-cta {
+        width: 16vw;
+        font-size: 1.7rem;
+    }
+    
+    .btn-whatsapp {
+        width: 16vw;
+        font-size: 1.43rem;
+    }
+
+}
+
+/* large desktop styles */
+
+@media screen and (min-width: 1680px) {
+
+    .btn-cta {
+        width: 16vw;
+        font-size: 2.32rem;
+    }
+    
+    .btn-whatsapp {
+        width: 16vw;
+        font-size: 2.2rem;
+    }
+
+    .contacto-phone {
+        font-size: 2.5rem;
+    }
+    
+    .contacto-mail {
+        font-size: 2.8rem;
+
+    }
+
+}
+
+
+
+    

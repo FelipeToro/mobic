@@ -1,0 +1,40 @@
+/* Variables */
+
+    /* Colores */
+
+    :root {
+       --amarillo-mobic: #ffdd00;
+       --negro: #000;
+    }
+    
+    
+    /* Reset */
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        cursor: none;
+    }
+    
+    html {
+        font-family: 'Poppins', sans-serif;
+        font-size: 10px;
+    }
+    
+    a,ul,li {
+        text-decoration: none;
+    }
+    
+    li {
+        list-style-type: none;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
